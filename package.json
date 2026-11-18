@@ -1,0 +1,13 @@
+{
+  "name": "nected",
+  "version": "1.0.0",
+  "description": "Simulador visual de redes: roteador, switch, load balance, CFTV, VoIP e crimpagem.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "test": "node --test tests/"
+  },
+  "engines": { "node": ">=18" },
+  "license": "UNLICENSED"
+}
