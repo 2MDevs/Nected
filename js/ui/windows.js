@@ -23,7 +23,7 @@ export function openWin(id) {
   el.innerHTML = `<div class="wtitle"><span class="wic"></span><span class="tt"></span><button class="wb" data-w="min" title="Minimizar">—</button>
     <button class="wb" data-w="max" title="Maximizar">▢</button><button class="wb x" data-w="close" title="Fechar">✕</button></div><div class="wtabs"></div><div class="wbody"></div>`;
   $('#wins').appendChild(el);
-  const w = { id, el, tab: 0, kind: id === 'crimp' ? 'crimp' : 'dev' };
+  const w = { id, el, tab: 0, kind: id === 'crimp' ? 'crimp' : 'dev', born: Date.now() };
   WINS[id] = w;
   const st = $('#stage').getBoundingClientRect(), n = Object.keys(WINS).length - 1, mob = st.width < 820;
   el.style.width = Math.min(id === 'crimp' ? 560 : 470, st.width - 16) + 'px';
@@ -102,6 +102,7 @@ function bindWin(w) {
   });
   tb.addEventListener('dblclick', () => el.classList.toggle('max'));
   el.addEventListener('click', e => {
+    if (Date.now() - w.born < 450) return; // evita o "clique fantasma" do toque que abriu a janela
     const wb = e.target.closest('[data-w]');
     if (wb) { const a = wb.dataset.w; if (a === 'close') closeWin(w.id); else if (a === 'max') el.classList.toggle('max'); else minWin(w); return; }
     const tab = e.target.closest('[data-tab]');

@@ -1,0 +1,14 @@
+{
+  "name": "Nected — Simulador de Redes",
+  "short_name": "Nected",
+  "description": "Treine roteador, switch, load balance, CFTV, VoIP e crimpagem num laboratório visual.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#121316",
+  "theme_color": "#17181b",
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
