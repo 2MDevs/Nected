@@ -212,3 +212,19 @@ table.t input,table.t select{padding:5px 7px}
  .cats{justify-content:flex-start}.cat{padding:5px 8px}
  [data-tip]:hover::after{display:none}
 }
+/* ---- v1 plataforma ---- */
+.mono{font-family:'JetBrains Mono',monospace;font-size:12px}
+.lbrow{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--line);gap:8px}
+.paper hr.cut{border-top:2px dotted #777;margin:14px 0}
+.tc{text-align:center;margin-bottom:4px}
+td.chst{border-bottom:1px solid var(--line)}
+.ghost .tile{width:56px;height:56px}
+.tbtn:disabled{opacity:.35;cursor:default}
+.labs{display:flex;flex-direction:column;gap:6px;max-height:50vh;overflow:auto}
+.lab{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#24262b}
+.lab.cur{border-color:var(--blue)}
+.lab .ln{flex:1;min-width:0}.lab .ln b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lab .btn{padding:5px 9px}
+.evbox td:last-child{width:16px;padding-left:0}
+.cats{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.cat{white-space:nowrap}
+@media (max-width:820px){.cats{justify-content:flex-start}.cat{padding:5px 8px}#bUndo,#bRedo{padding:7px 8px}}
